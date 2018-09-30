@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+    <!-- <base href="/"> -->
+
+    <title>Honey Hunters</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- Template Basic Images Start -->
+    <link rel="icon" href="assets/img/favicon/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon-180x180.png">
+    <!-- Template Basic Images End -->
+    
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#000">
+    <!-- Custom Browsers Color End -->
+
+    <link rel="stylesheet" href="assets/css/main.min.css">
+
+</head>
+
+<body>
+
+    <!-- Custom HTML -->
+    
+    <section class="section section-gray">
+
+            <div class="container">
+
+                <div class="row">
+                    
+                    <a class="logo-container" href="#">
+                        <img class="logo" src="assets/img/logo.png" alt="Honey Hunters">
+                    </a>
+
+                </div>
+
+                <div class="row contact d-flex justify-content-center">
+                    
+                    <img class="contact-img" src="assets/img/contact.png" alt="Отправьте комментарий">
+
+                </div>
+                    
+                <form action="/add" method="post" class="row form">
+                    
+                    <div class="form-container col-xs-12 col-md-5">
+                        
+                        <div class="form-group">
+                            <label for="name">Имя <span>*</span></label>
+                            <input class="form-control" name="name" id="name" type="text" value="" required data-parsley-error-message="Пожалуйста введите имя!">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">E-mail <span>*</span></label>
+                            <input class="form-control" name="email" id="email" type="email" value="" required data-parsley-error-message="Пожалуйста введите email!">
+                        </div>
+
+                    </div>
+
+                    <div class="form-container offset-md-1 col-xs-12 col-md-6">
+
+                        <div class="form-group">
+                            <label for="comment">Комментарий <span>*</span></label>
+                            <textarea class="form-control" name="comment" id="comment" required data-parsley-error-message="Пожалуйста введите комментарий!"></textarea>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group-btn d-flex justify-content-end">
+                        <button class="sumbit" type="submit">Записать</button>
+                    </div>
+
+                    <div class="alert alert-dismissible fade show" role="alert">
+                        <div></div>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+            </div>
+        
+    </section>
+
+    <section class="section section-white comment-section">
+
+            <div class="container">
+
+                <div class="row d-flex justify-content-center">
+                    
+                    <h2>Выводим комментарии</h2>
+
+                </div>
+
+                <div class="row d-flex justify-content-between comment">
+                    
+                    {% block content %}
+
+                    {% endblock %}
+
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <section class="section section-gray footer-section">
+
+            <div class="container">
+
+                <div class="row">
+                    
+                    <div class="col-sm-12 col-md-5">
+                        <a class="logo-container" href="#">
+                            <img class="footer-logo" src="assets/img/logo.png" alt="Honey Hunters">
+                        </a>
+                    </div>
+
+                    <div class="social col">
+                        <a href="#">
+                            <img src="assets/img/vk.png" alt="Мы во Вконтакте">
+                        </a>
+                        <a href="#">
+                            <img src="assets/img/fb.png" alt="Мы в Facebook">
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+    </section>
+
+    <script src="assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/libs/parsley/parsley.min.js"></script>
+    <script src="assets/js/scripts.min.js"></script>
+
+</body>
+</html>

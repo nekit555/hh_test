@@ -1,0 +1,23 @@
+{% extends 'templates/defaults.twig' %}
+
+{% block content %}
+    {% for comment in comments %}
+        <div class="comment-column col-xs-12 col-sm-6 col-md-6 col-lg-4">
+
+          <div class="comment-column-name">
+              {{ comment.name|e }}
+          </div>
+
+          <div class="comment-column-container">
+              <div class="comment-column-email">
+                  <a href="mailto:{{ comment.email|e }}">{{ comment.email|e }}</a>
+              </div>
+
+              <div class="comment-column-comment">
+                  {{ comment.comment|e }}
+              </div>
+          </div>
+
+      </div>
+    {% endfor %}
+{% endblock %}
